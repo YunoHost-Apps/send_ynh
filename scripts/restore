@@ -102,7 +102,7 @@ yunohost service add $app --description="Simple, private file sharing" --log="/v
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
-ynh_systemd_action --service_name=$app --action="start" --log_path="systemd" #--line_match="HTTP Server listening"
+ynh_systemd_action --service_name=$app --action="start" --log_path="systemd"
 
 #=================================================
 # GENERIC FINALIZATION

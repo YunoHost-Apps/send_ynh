@@ -96,8 +96,6 @@ chmod +x "$final_path/server/bin/prod.js"
 #=================================================
 ynh_script_progression --message="Configuring NGINX web server..." --weight=2
 
-ynh_replace_string --match_string="__ENV_PATH__" --replace_string="$PATH" --target_file="../conf/systemd.service"
-
 # Create a dedicated NGINX config
 ynh_add_nginx_config
 
@@ -109,7 +107,7 @@ ynh_script_progression --message="Adding a configuration file..." --weight=2
 ynh_add_config --template="../conf/config.js" --destination="$final_path/server/config.js"
 
 chmod 400 "$final_path/server/config.js"
-chown $app:$app "$final_path/server/config.js"
+chown $app "$final_path/server/config.js"
 
 #=================================================
 # SPECIFIC SETUP
@@ -144,7 +142,7 @@ yunohost service add $app --description="Simple, private file sharing" --log="/v
 ynh_script_progression --message="Starting a systemd service..." --weight=2
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="systemd" #--line_match="HTTP Server listening"
+ynh_systemd_action --service_name=$app --action="start" --log_path="systemd"
 
 #=================================================
 # SETUP SSOWAT

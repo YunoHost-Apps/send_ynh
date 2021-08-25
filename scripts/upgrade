@@ -130,8 +130,6 @@ fi
 #=================================================
 ynh_script_progression --message="Configuring a systemd service..." --weight=2
 
-ynh_replace_string --match_string="__ENV_PATH__" --replace_string="$PATH" --target_file="../conf/systemd.service"
-
 # Create a dedicated systemd config
 ynh_add_systemd_config
 
@@ -147,7 +145,7 @@ yunohost service add $app --description="Simple, private file sharing" --log="/v
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
-ynh_systemd_action --service_name=$app --action="start" --log_path="systemd" #--line_match="HTTP Server listening"
+ynh_systemd_action --service_name=$app --action="start" --log_path="systemd"
 
 #=================================================
 # RELOAD NGINX
