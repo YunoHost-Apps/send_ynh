@@ -126,7 +126,7 @@ const conf = convict({
   },
   listen_address: {
     format: 'ipaddress',
-    default: '0.0.0.0',
+    default: '127.0.0.1',
     env: 'IP_ADDRESS'
   },
   listen_port: {
@@ -147,7 +147,7 @@ const conf = convict({
   },
   env: {
     format: ['production', 'development', 'test'],
-    default: 'development',
+    default: 'production',
     env: 'NODE_ENV'
   },
   max_file_size: {
