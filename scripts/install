@@ -120,8 +120,8 @@ ynh_script_progression --message="Building $app... (this will take some time and
 
 pushd "$final_path"
 	ynh_use_nodejs
-	ynh_exec_warn_less ynh_exec_as $app ynh_npm install
-	ynh_exec_warn_less ynh_exec_as $app ynh_npm run build
+	ynh_exec_warn_less ynh_npm install
+	ynh_exec_warn_less ynh_npm run build
 popd
 
 #=================================================
