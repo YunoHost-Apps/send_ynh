@@ -1,0 +1,46 @@
+{
+    "name": "Send",
+    "id": "send",
+    "packaging_format": 1,
+    "description": {
+        "en": "Simple, private file sharing",
+        "fr": "Partage de fichier simple et privé"
+    },
+    "version": "3.4.13~ynh1",
+    "url": "https://github.com/timvisee/send",
+    "upstream": {
+        "license": "MPL-2.0",
+        "website": "https://github.com/timvisee/send",
+        "demo": "https://send.vis.ee/",
+        "code": "https://github.com/timvisee/send"
+    },
+    "license": "MPL-2.0",
+    "maintainer": {
+        "name": ""
+    },
+    "requirements": {
+        "yunohost": ">= 4.2.4"
+    },
+    "multi_instance": true,
+    "services": [
+        "nginx"
+    ],
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain",
+                "example": "example.com"
+            },
+            {
+                "name": "is_public",
+                "type": "boolean",
+                "help": {
+                    "en": "If enabled, Send will be accessible by people who do not have an account. This can be changed later via the webadmin.",
+                    "fr": "Si cette case est cochée, Send sera accessible aux personnes n’ayant pas de compte. Vous pourrez changer ceci plus tard via la webadmin."
+                },
+                "default": true
+            }
+        ]
+    }
+}

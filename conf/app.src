@@ -1,0 +1,6 @@
+SOURCE_URL=https://github.com/timvisee/send/archive/refs/tags/v3.4.13.tar.gz
+SOURCE_SUM=6b4e072f23325edd47666bdc6edf0e428c5e4ced22d8a5d3ffa9ca12be63b7cb
+SOURCE_SUM_PRG=sha256sum
+SOURCE_FORMAT=tar.gz
+SOURCE_IN_SUBDIR=true
+SOURCE_FILENAME=

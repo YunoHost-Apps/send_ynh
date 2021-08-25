@@ -1,0 +1,16 @@
+[Unit]
+Description=Send: private file sharing
+After=syslog.target network.target redis-server.service
+
+[Service]
+Type=simple
+User=__APP__
+Group=__APP__
+WorkingDirectory=__FINALPATH__
+Environment="NODE_ENV=production"
+#Environment="__YNH_NODE_LOAD_PATH__"
+ExecStart=__YNH_NODE__ __FINALPATH__/server/bin/prod.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
