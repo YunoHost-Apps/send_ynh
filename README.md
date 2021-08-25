@@ -27,7 +27,7 @@ Simple, private file sharing
 
 ## Documentation and resources
 
-* Official app website: https://github.com/timvisee/send
+* Official app website: https://send.vis.ee/
 * Upstream app code repository: https://github.com/timvisee/send
 * YunoHost documentation for this app: https://yunohost.org/app_send
 * Report a bug: https://github.com/YunoHost-Apps/send_ynh/issues
