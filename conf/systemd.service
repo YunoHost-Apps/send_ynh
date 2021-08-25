@@ -1,6 +1,6 @@
 [Unit]
 Description=Send: private file sharing
-After=syslog.target network.target redis-server.service
+After=syslog.target network.target
 
 [Service]
 Type=simple
