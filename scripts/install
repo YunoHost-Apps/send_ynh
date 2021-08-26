@@ -125,10 +125,16 @@ chown $app "$final_path/server/config.js"
 #==============================================
 ynh_script_progression --message="Building $app... (this will take some time and resources!)" --weight=20
 
+#pushd "$final_path"
+#	ynh_use_nodejs
+#	ynh_exec_warn_less ynh_npm install
+#	ynh_exec_warn_less ynh_npm run build
+#popd
+
 pushd "$final_path"
 	ynh_use_nodejs
-	ynh_exec_warn_less ynh_npm install
-	ynh_exec_warn_less ynh_npm run build
+	ynh_exec_warn_less ynh_exec_as $app env "$ynh_node_load_PATH" npm install
+	ynh_exec_warn_less ynh_exec_as $app env "$ynh_node_load_PATH" npm run build
 popd
 
 #=================================================
