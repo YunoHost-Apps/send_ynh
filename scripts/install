@@ -64,10 +64,19 @@ ynh_app_setting_set --app=$app --key=port --value=$port
 #=================================================
 ynh_script_progression --message="Installing dependencies..." --weight=20
 
-#ynh_install_app_dependencies $pkg_dependencies
+ynh_install_app_dependencies $pkg_dependencies
 
 # Install Nodejs
 ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
+
+#=================================================
+# CREATE A REDIS DATABASE
+#=================================================
+ynh_script_progression --message="Creating a Redis database..." --weight=5
+
+# Configure redis
+redis_db=$(ynh_redis_get_free_db)
+ynh_app_setting_set --app="$app" --key=redis_db --value="$redis_db"
 
 #=================================================
 # CREATE DEDICATED USER
@@ -116,10 +125,16 @@ chown $app "$final_path/server/config.js"
 #==============================================
 ynh_script_progression --message="Building $app... (this will take some time and resources!)" --weight=20
 
+#pushd "$final_path"
+#	ynh_use_nodejs
+#	ynh_exec_warn_less ynh_npm install
+#	ynh_exec_warn_less ynh_npm run build
+#popd
+
 pushd "$final_path"
 	ynh_use_nodejs
-	ynh_exec_warn_less ynh_npm install
-	ynh_exec_warn_less ynh_npm run build
+	ynh_exec_warn_less ynh_exec_as $app env "$ynh_node_load_PATH" npm install
+	ynh_exec_warn_less ynh_exec_as $app env "$ynh_node_load_PATH" npm run build
 popd
 
 #=================================================
@@ -154,6 +169,8 @@ if [ $is_public -eq 1 ]
 then
 	ynh_permission_update --permission "main" --add "visitors"
 fi
+
+ynh_permission_create --permission="api" --url="/api" --allowed="visitors" --auth_header="false" --show_tile="false" --protected="true"
 
 #=================================================
 # RELOAD NGINX
