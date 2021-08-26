@@ -10,7 +10,7 @@
 nodejs_version=15
 
 # dependencies used by the app
-#pkg_dependencies="redis-server"
+pkg_dependencies="redis-server"
 
 #=================================================
 # PERSONAL HELPERS
