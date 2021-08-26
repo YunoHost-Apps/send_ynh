@@ -15,7 +15,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-Simple, private file sharing
+File sharing which allows to send encrypted files
 
 **Shipped version:** 3.4.13~ynh1
 
