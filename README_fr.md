@@ -11,7 +11,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-Partage de fichier simple et privé
+Partage de fichiers qui permet d'envoyer des fichiers chiffrés
 
 **Version incluse :** 3.4.13~ynh1
 
