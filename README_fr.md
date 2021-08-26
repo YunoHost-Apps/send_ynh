@@ -11,7 +11,9 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-Partage de fichiers qui permet d'envoyer des fichiers chiffrés
+Un fork du Firefox Send de Mozilla. Mozilla a arrêté Send, et ce fork est un effort de la communauté pour maintenir le projet en vie.
+Send est une expérience de partage de fichiers qui permet d'envoyer des fichiers chiffrés à d'autres utilisateurs.
+
 
 **Version incluse :** 3.4.13~ynh1
 

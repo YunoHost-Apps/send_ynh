@@ -15,7 +15,9 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-File sharing which allows to send encrypted files
+A fork of Mozilla's Firefox Send. Mozilla discontinued Send, this fork is a community effort to keep the project up-to-date and alive.
+Send is a file sharing experiment which allows you to send encrypted files to other users.
+
 
 **Shipped version:** 3.4.13~ynh1
 
