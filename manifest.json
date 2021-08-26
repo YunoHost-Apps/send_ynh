@@ -3,8 +3,8 @@
     "id": "send",
     "packaging_format": 1,
     "description": {
-        "en": "Simple, private file sharing",
-        "fr": "Partage de fichier simple et privé"
+        "en": "File sharing which allows to send encrypted files",
+        "fr": "Partage de fichiers qui permet d'envoyer des fichiers chiffrés"
     },
     "version": "3.4.13~ynh1",
     "url": "https://github.com/timvisee/send",
