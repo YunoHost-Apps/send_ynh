@@ -16,7 +16,7 @@
     },
     "license": "MPL-2.0",
     "maintainer": {
-        "name": ""
+        "name": "eric_G"
     },
     "requirements": {
         "yunohost": ">= 4.2.4"
