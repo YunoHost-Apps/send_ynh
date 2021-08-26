@@ -106,7 +106,7 @@ const conf = convict({
   },
   redis_db: {
     format: String,
-    default: '',
+    default: '__REDIS_DB__',
     env: 'REDIS_DB'
   },
   redis_event_expire: {
