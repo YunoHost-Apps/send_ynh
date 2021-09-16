@@ -10,7 +10,7 @@
 # automatic actions when a new upstream release is detected.
 
 # Remove this exit command when you are ready to run this Action
-exit 1
+#exit 1
 
 #=================================================
 # FETCHING LATEST RELEASE AND ITS ASSETS
@@ -20,8 +20,12 @@ exit 1
 current_version=$(cat manifest.json | jq -j '.version|split("~")[0]')
 repo=$(cat manifest.json | jq -j '.upstream.code|split("https://github.com/")[1]')
 # Some jq magic is needed, because the latest upstream release is not always the latest version (e.g. security patches for older versions)
-version=$(curl --silent "https://api.github.com/repos/$repo/releases" | jq -r '.[] | .tag_name' | sort -V | tail -1)
+version=$(curl --silent "https://api.github.com/repos/$repo/releases" | jq -r '.[] | select( .prerelease != true ) | .tag_name' | sort -V | tail -1)
 assets=($(curl --silent "https://api.github.com/repos/$repo/releases" | jq -r '[ .[] | select(.tag_name=="'$version'").assets[].browser_download_url ] | join(" ") | @sh' | tr -d "'"))
+
+# if [[ ${version:0:1} == "v" || ${version:0:1} == "V" ]]; then
+#     version=${version:1}
+# fi
 
 # Setting up the environment variables
 echo "Current version: $current_version"
@@ -59,14 +63,8 @@ echo "Handling asset at $asset_url"
 # Here we base the source file name upon a unique keyword in the assets url (admin vs. update)
 # Leave $src empty to ignore the asset
 case $asset_url in
-  *"admin"*)
+  *".tar.gz"*)
     src="app"
-    ;;
-  *"update"*)
-    src="app-upgrade"
-    ;;
-  *)
-    src=""
     ;;
 esac
 
@@ -98,7 +96,6 @@ SOURCE_SUM=$checksum
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=$extension
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
 EOT
 echo "... conf/$src.src updated"
 
@@ -123,7 +120,7 @@ done
 sudo apt-get install moreutils
 
 # Replace new version in manifest
-jq -s --indent 4 ".[] | .version = \"$VERSION~ynh1\"" manifest.json | sponge manifest.json
+echo "$(jq -s --indent 4 ".[] | .version = \"$version~ynh1\"" manifest.json)" > manifest.json
 
 # No need to update the README, yunohost-bot takes care of it
 
