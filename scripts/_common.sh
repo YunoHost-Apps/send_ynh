@@ -4,13 +4,7 @@
 # COMMON VARIABLES
 #=================================================
 
-# dependencies used by the app
-#pkg_dependencies="redis-server"
-
 nodejs_version=15
-
-# dependencies used by the app
-pkg_dependencies="redis-server"
 
 #=================================================
 # PERSONAL HELPERS
@@ -23,8 +17,6 @@ pkg_dependencies="redis-server"
 #=================================================
 # FUTURE OFFICIAL HELPERS
 #=================================================
-
-#!/bin/bash
 
 # get the first available redis database
 #
