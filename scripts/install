@@ -166,6 +166,8 @@ ynh_script_progression --message="Configuring permissions..." --weight=1
 if [ $is_public -eq 1 ]
 then
 	ynh_permission_update --permission "main" --add "visitors"
+else
+	ynh_permission_create --permission="download" --url="/download" --allowed="visitors"
 fi
 
 ynh_permission_create --permission="api" --url="/api" --allowed="visitors" --auth_header="false" --show_tile="false" --protected="true"
