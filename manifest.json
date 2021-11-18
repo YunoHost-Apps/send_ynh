@@ -6,7 +6,7 @@
         "en": "File sharing which allows to send encrypted files",
         "fr": "Partage de fichiers qui permet d'envoyer des fichiers chiffrés"
     },
-    "version": "3.4.13~ynh2",
+    "version": "3.4.14~ynh1",
     "url": "https://github.com/timvisee/send",
     "upstream": {
         "license": "MPL-2.0",
@@ -19,7 +19,7 @@
         "name": "eric_G"
     },
     "requirements": {
-        "yunohost": ">= 4.2.4"
+        "yunohost": ">= 4.3.0"
     },
     "multi_instance": true,
     "services": [
