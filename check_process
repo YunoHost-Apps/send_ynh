@@ -10,11 +10,13 @@
 		setup_private=1
 		setup_public=1
 		upgrade=1
+		upgrade=1	from_commit=6e2eba4a9b6b455b35ce9d8e558c454a001bfacf
 		backup_restore=1
 		multi_instance=1
 		change_url=1
 ;;; Options
 Email=
-Notification=none
 ;;; Upgrade options
+	; commit=6e2eba4a9b6b455b35ce9d8e558c454a001bfacf
+		name=3.4.14
 		manifest_arg=domain=DOMAIN&is_public=1&
