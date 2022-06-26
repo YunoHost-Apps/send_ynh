@@ -28,6 +28,15 @@ port=$(ynh_app_setting_get --app=$app --key=port)
 upgrade_type=$(ynh_check_app_version_changed)
 
 #=================================================
+# STANDARD UPGRADE STEPS
+#=================================================
+# STOP SYSTEMD SERVICE
+#=================================================
+ynh_script_progression --message="Stopping a systemd service..." --weight=1
+
+ynh_systemd_action --service_name=$app --action="stop" --log_path="systemd"
+
+#=================================================
 # BACKUP BEFORE UPGRADE THEN ACTIVE TRAP
 #=================================================
 ynh_script_progression --message="Backing up $app before upgrading (may take a while)..." --weight=10
@@ -40,15 +49,6 @@ ynh_clean_setup () {
 }
 # Exit if an error occurs during the execution of the script
 ynh_abort_if_errors
-
-#=================================================
-# STANDARD UPGRADE STEPS
-#=================================================
-# STOP SYSTEMD SERVICE
-#=================================================
-ynh_script_progression --message="Stopping a systemd service..." --weight=1
-
-ynh_systemd_action --service_name=$app --action="stop" --log_path="systemd"
 
 #=================================================
 # CREATE DEDICATED USER
@@ -66,23 +66,8 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=10
 
-	# Create a temporary directory
-	tmpdir="$(mktemp -d)"
-	
-	# Backup the config file in the temp dir
-	cp -a "$final_path/server/config.js" "$tmpdir/config.js"
-	
-	# Remove the app directory securely
-	ynh_secure_remove --file=$final_path
-
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir=$final_path
-
-	#Copy the admin saved settings from tmp directory to final path	
-	cp -a "$tmpdir/config.js" "$final_path/server/config.js" 
-
-	# Remove the tmp directory securely
-	ynh_secure_remove --file="$tmpdir"
+	ynh_setup_source --dest_dir=$final_path --keep="$final_path/server/config.js" 
 fi
 
 chmod 750 "$final_path"
