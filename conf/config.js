@@ -1,7 +1,10 @@
 const convict = require('convict');
+const convict_format_with_validator = require('convict-format-with-validator');
 const { tmpdir } = require('os');
 const path = require('path');
 const { randomBytes } = require('crypto');
+
+convict.addFormats(convict_format_with_validator);
 
 convict.addFormat({
   name: 'positive-int-array',
@@ -239,6 +242,68 @@ const conf = convict({
     format: String,
     default: 'https://github.com/timvisee/send',
     env: 'SEND_FOOTER_SOURCE_URL'
+  },
+  ui_color_primary: {
+    format: String,
+    default: '#0a84ff',
+    env: 'UI_COLOR_PRIMARY'
+  },
+  ui_color_accent: {
+    format: String,
+    default: '#003eaa',
+    env: 'UI_COLOR_ACCENT'
+  },
+  ui_custom_assets: {
+    android_chrome_192px: {
+      format: String,
+      default: '',
+      env: 'UI_CUSTOM_ASSETS_ANDROID_CHROME_192PX'
+    },
+    android_chrome_512px: {
+      format: String,
+      default: '',
+      env: 'UI_CUSTOM_ASSETS_ANDROID_CHROME_512PX'
+    },
+    apple_touch_icon: {
+      format: String,
+      default: '',
+      env: 'UI_CUSTOM_ASSETS_APPLE_TOUCH_ICON'
+    },
+    favicon_16px: {
+      format: String,
+      default: '',
+      env: 'UI_CUSTOM_ASSETS_FAVICON_16PX'
+    },
+    favicon_32px: {
+      format: String,
+      default: '',
+      env: 'UI_CUSTOM_ASSETS_FAVICON_32PX'
+    },
+    icon: {
+      format: String,
+      default: '',
+      env: 'UI_CUSTOM_ASSETS_ICON'
+    },
+    safari_pinned_tab: {
+      format: String,
+      default: '',
+      env: 'UI_CUSTOM_ASSETS_SAFARI_PINNED_TAB'
+    },
+    facebook: {
+      format: String,
+      default: '',
+      env: 'UI_CUSTOM_ASSETS_FACEBOOK'
+    },
+    twitter: {
+      format: String,
+      default: '',
+      env: 'UI_CUSTOM_ASSETS_TWITTER'
+    },
+    wordmark: {
+      format: String,
+      default: '',
+      env: 'UI_CUSTOM_ASSETS_WORDMARK'
+    }
   }
 });
 
