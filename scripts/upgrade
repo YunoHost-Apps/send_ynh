@@ -75,8 +75,23 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=10
 
+	# Create a temporary directory
+	tmpdir="$(mktemp -d)"
+	
+	# Backup the config file in the temp dir
+	cp -a "$final_path/server/config.js" "$tmpdir/config.js"
+	
+	# Remove the app directory securely
+	ynh_secure_remove --file=$final_path
+
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir=$final_path --keep="$final_path/server/config.js" 
+	ynh_setup_source --dest_dir=$final_path
+
+	#Copy the admin saved settings from tmp directory to final path	
+	cp -a "$tmpdir/config.js" "$final_path/server/config.js" 
+
+	# Remove the tmp directory securely
+	ynh_secure_remove --file="$tmpdir"
 fi
 
 chmod 750 "$final_path"
@@ -103,12 +118,12 @@ ynh_add_nginx_config
 #=================================================
 # SPECIFIC UPGRADE
 #=================================================
-# INSTALL SEND
+# BUILD APP
 #=================================================
 
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
-	ynh_script_progression --message="Building $app... (this will take some time and resources!)" --weight=16
+	ynh_script_progression --message="Building app... (this will take some time and resources!)" --weight=16
 
 	pushd "$final_path"
 		ynh_use_nodejs
