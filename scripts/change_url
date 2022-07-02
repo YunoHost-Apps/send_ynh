@@ -32,9 +32,9 @@ port=$(ynh_app_setting_get --app=$app --key=port)
 redis_db=$(ynh_app_setting_get --app=$app --key=redis_db)
 
 #=================================================
-# BACKUP BEFORE UPGRADE THEN ACTIVE TRAP
+# BACKUP BEFORE CHANGE URL THEN ACTIVE TRAP
 #=================================================
-ynh_script_progression --message="Backing up $app before changing its URL (may take a while)..." --weight=1
+ynh_script_progression --message="Backing up the app before changing its URL (may take a while)..." --weight=1
 
 # Backup the current version of the app
 ynh_backup_before_upgrade
@@ -71,7 +71,7 @@ fi
 #=================================================
 ynh_script_progression --message="Stopping a systemd service..." --weight=1
 
-ynh_systemd_action --service_name=$app --action="stop" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app --action="stop"
 
 #=================================================
 # MODIFY URL IN NGINX CONF
@@ -102,6 +102,8 @@ then
 	ynh_store_file_checksum --file="/etc/nginx/conf.d/$new_domain.d/$app.conf"
 fi
 
+#=================================================
+# SPECIFIC MODIFICATIONS
 #=================================================
 # ADD A CONFIGURATION
 #=================================================

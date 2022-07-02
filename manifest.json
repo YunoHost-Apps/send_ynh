@@ -6,7 +6,7 @@
         "en": "File sharing which allows to send encrypted files",
         "fr": "Partage de fichiers qui permet d'envoyer des fichiers chiffrés"
     },
-    "version": "3.4.20~ynh1",
+    "version": "3.4.20~ynh2",
     "url": "https://github.com/timvisee/send",
     "upstream": {
         "license": "MPL-2.0",
@@ -26,7 +26,7 @@
         "nginx"
     ],
     "arguments": {
-        "install" : [
+        "install": [
             {
                 "name": "domain",
                 "type": "domain"
