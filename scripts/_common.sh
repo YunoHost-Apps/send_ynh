@@ -4,7 +4,10 @@
 # COMMON VARIABLES
 #=================================================
 
-nodejs_version=16
+# dependencies used by the app
+pkg_dependencies="redis-server"
+
+nodejs_version=16.13
 
 #=================================================
 # PERSONAL HELPERS
