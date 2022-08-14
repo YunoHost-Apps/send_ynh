@@ -21,6 +21,7 @@ Send is a file sharing experiment which allows you to send encrypted files to ot
 
 **Shipped version:** 3.4.20~ynh2
 
+
 **Demo:** https://send.vis.ee/
 
 ## Screenshots
