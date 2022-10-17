@@ -1,5 +1,5 @@
-SOURCE_URL=https://github.com/timvisee/send/archive/refs/tags/v3.4.20.tar.gz
-SOURCE_SUM=d8b485383f5f2fdca98501e1abdacec158b2eb04a7a8a4dabae2a0d4f542c6e4
+SOURCE_URL=https://github.com/timvisee/send/archive/refs/tags/v3.4.21.tar.gz
+SOURCE_SUM=60b42b4c99b439b4d2aabea0efdab930c80730de4c8f46e41c68d05c1052ff1c
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
