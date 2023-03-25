@@ -5,7 +5,7 @@
 #=================================================
 
 # dependencies used by the app
-pkg_dependencies="redis-server"
+#REMOVEME? pkg_dependencies="redis-server"
 
 nodejs_version=16.13
 
