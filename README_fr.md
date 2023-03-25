@@ -28,13 +28,6 @@ Send est une expérience de partage de fichiers qui permet d'envoyer des fichier
 
 ![Capture d’écran de Send](./doc/screenshots/screenshot.png)
 
-## Avertissements / informations importantes
-
-## Configuration
-
-Le chemin du fichier de configuration est `var/www/send/server/config.js`.
-Vous pouvez configurer des paramètres tels que les taille de fichier, nombre de téléchargements, ou temps d'expiration des fichiers maximums.
-
 ## Documentations et ressources
 
 * Site officiel de l’app : <https://send.vis.ee/>
