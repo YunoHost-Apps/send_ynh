@@ -42,6 +42,8 @@ ram.runtime = "50M"
         url = "https://github.com/timvisee/send/archive/refs/tags/v3.4.21.tar.gz"
         sha256 = "60b42b4c99b439b4d2aabea0efdab930c80730de4c8f46e41c68d05c1052ff1c"
 
+    [resources.ports]
+
     [resources.system_user]
 
     [resources.install_dir]
