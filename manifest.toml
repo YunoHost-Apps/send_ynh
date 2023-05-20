@@ -40,6 +40,7 @@ ram.runtime = "50M"
         [resources.sources.main]
         url = "https://github.com/timvisee/send/archive/refs/tags/v3.4.23.tar.gz"
         sha256 = "eed0e391050842413d300133a64cc76829e3ba1d69e113f6e5fdc3eda777fa2a"
+        autoupdate.strategy = "latest_github_tag"
 
     [resources.ports]
 
