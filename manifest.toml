@@ -5,7 +5,7 @@ name = "Send"
 description.en = "File sharing which allows to send encrypted files"
 description.fr = "Partage de fichiers qui permet d'envoyer des fichiers chiffrés"
 
-version = "3.4.21~ynh1"
+version = "3.4.23~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -16,7 +16,7 @@ demo = "https://send.vis.ee/"
 code = "https://github.com/timvisee/send"
 
 [integration]
-yunohost = ">= 11.1.15"
+yunohost = ">= 11.1.20"
 architectures = "all"
 multi_instance = true
 ldap = false
@@ -38,8 +38,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/timvisee/send/archive/refs/tags/v3.4.21.tar.gz"
-        sha256 = "60b42b4c99b439b4d2aabea0efdab930c80730de4c8f46e41c68d05c1052ff1c"
+        url = "https://github.com/timvisee/send/archive/refs/tags/v3.4.23.tar.gz"
+        sha256 = "eed0e391050842413d300133a64cc76829e3ba1d69e113f6e5fdc3eda777fa2a"
 
     [resources.ports]
 
