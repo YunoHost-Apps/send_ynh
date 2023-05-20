@@ -20,20 +20,13 @@ A fork of Mozilla's Firefox Send. Mozilla discontinued Send, this fork is a comm
 Send is a file sharing experiment which allows you to send encrypted files to other users.
 
 
-**Shipped version:** 3.4.21~ynh1
+**Shipped version:** 3.4.23~ynh1
 
 **Demo:** https://send.vis.ee/
 
 ## Screenshots
 
 ![Screenshot of Send](./doc/screenshots/screenshot.png)
-
-## Disclaimers / important information
-
-## Configuration
-
-The config file path is `var/www/send/server/config.js`.
-You can configure things such as the max file size, max downloads, or max file expire time.
 
 ## Documentation and resources
 

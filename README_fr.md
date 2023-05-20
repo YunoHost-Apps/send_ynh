@@ -20,20 +20,13 @@ Un fork du Firefox Send de Mozilla. Mozilla a arrêté Send, et ce fork est un e
 Send est une expérience de partage de fichiers qui permet d'envoyer des fichiers chiffrés à d'autres utilisateurs.
 
 
-**Version incluse :** 3.4.21~ynh1
+**Version incluse :** 3.4.23~ynh1
 
 **Démo :** https://send.vis.ee/
 
 ## Captures d’écran
 
 ![Capture d’écran de Send](./doc/screenshots/screenshot.png)
-
-## Avertissements / informations importantes
-
-## Configuration
-
-Le chemin du fichier de configuration est `var/www/send/server/config.js`.
-Vous pouvez configurer des paramètres tels que les taille de fichier, nombre de téléchargements, ou temps d'expiration des fichiers maximums.
 
 ## Documentations et ressources
 
