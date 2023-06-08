@@ -5,7 +5,8 @@ It shall NOT be edited by hand.
 
 # Send for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/send.svg)](https://dash.yunohost.org/appci/app/send) ![Working status](https://ci-apps.yunohost.org/ci/badges/send.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/send.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/send.svg)](https://dash.yunohost.org/appci/app/send) ![Working status](https://ci-apps.yunohost.org/ci/badges/send.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/send.maintain.svg)
+
 [![Install Send with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=send)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -19,20 +20,13 @@ A fork of Mozilla's Firefox Send. Mozilla discontinued Send, this fork is a comm
 Send is a file sharing experiment which allows you to send encrypted files to other users.
 
 
-**Shipped version:** 3.4.20~ynh2
+**Shipped version:** 3.4.23~ynh1
 
 **Demo:** https://send.vis.ee/
 
 ## Screenshots
 
 ![Screenshot of Send](./doc/screenshots/screenshot.png)
-
-## Disclaimers / important information
-
-## Configuration
-
-The config file path is `var/www/send/server/config.js`.
-You can configure things such as the max file size, max downloads, or max file expire time.
 
 ## Documentation and resources
 

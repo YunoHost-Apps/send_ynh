@@ -1,7 +1,0 @@
-SOURCE_URL=https://github.com/timvisee/send/archive/refs/tags/v3.4.20.tar.gz
-SOURCE_SUM=d8b485383f5f2fdca98501e1abdacec158b2eb04a7a8a4dabae2a0d4f542c6e4
-SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=tar.gz
-SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
-SOURCE_EXTRACT=true

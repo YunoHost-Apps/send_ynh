@@ -1,0 +1,57 @@
+packaging_format = 2
+
+id = "send"
+name = "Send"
+description.en = "File sharing which allows to send encrypted files"
+description.fr = "Partage de fichiers qui permet d'envoyer des fichiers chiffrés"
+
+version = "3.4.23~ynh1"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "MPL-2.0"
+website = "https://send.vis.ee/"
+demo = "https://send.vis.ee/"
+code = "https://github.com/timvisee/send"
+
+[integration]
+yunohost = ">= 11.1.19"
+architectures = ["amd64", "arm64", "armhf"]
+multi_instance = true
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+    full_domain = true
+
+    [install.init_main_permission]
+    help.en = "If enabled, Send will be accessible by people who do not have an account. This can be changed later via the webadmin."
+    help.fr = "Si cette case est cochée, Send sera accessible aux personnes n’ayant pas de compte. Vous pourrez changer ceci plus tard via la webadmin."
+    type = "group"
+    default = "visitors"
+
+[resources]
+        [resources.sources.main]
+        url = "https://github.com/timvisee/send/archive/refs/tags/v3.4.23.tar.gz"
+        sha256 = "eed0e391050842413d300133a64cc76829e3ba1d69e113f6e5fdc3eda777fa2a"
+        autoupdate.strategy = "latest_github_tag"
+
+    [resources.ports]
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+    api.url = "/api"
+    api.allowed = "visitors"
+    api.auth_header =false
+    api.show_tile = false
+    api.protected = true

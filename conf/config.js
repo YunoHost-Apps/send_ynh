@@ -168,6 +168,16 @@ const conf = convict({
     default: 'https://__DOMAIN__',
     env: 'BASE_URL'
   },
+  custom_title: {
+    format: String,
+    default: 'Send',
+    env: 'CUSTOM_TITLE'
+  },
+  custom_description: {
+    format: String,
+    default: 'Encrypt and send files with a link that automatically expires to ensure your important documents don’t stay online forever.',
+    env: 'CUSTOM_DESCRIPTION'
+  },
   detect_base_url: {
     format: Boolean,
     default: false,
@@ -243,6 +253,16 @@ const conf = convict({
     default: 'https://github.com/timvisee/send',
     env: 'SEND_FOOTER_SOURCE_URL'
   },
+  custom_footer_text: {
+    format: String,
+    default: '',
+    env: 'CUSTOM_FOOTER_TEXT'
+  },
+  custom_footer_url: {
+    format: String,
+    default: '',
+    env: 'CUSTOM_FOOTER_URL'
+  },
   ui_color_primary: {
     format: String,
     default: '#0a84ff',
@@ -252,6 +272,11 @@ const conf = convict({
     format: String,
     default: '#003eaa',
     env: 'UI_COLOR_ACCENT'
+  },
+  custom_locale: {
+    format: String,
+    default: '',
+    env: 'CUSTOM_LOCALE'
   },
   ui_custom_assets: {
     android_chrome_192px: {
@@ -303,6 +328,11 @@ const conf = convict({
       format: String,
       default: '',
       env: 'UI_CUSTOM_ASSETS_WORDMARK'
+    },
+    custom_css: {
+      format: String,
+      default: '',
+      env: 'UI_CUSTOM_CSS'
     }
   }
 });
