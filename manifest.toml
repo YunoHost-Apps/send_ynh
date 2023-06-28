@@ -16,7 +16,7 @@ demo = "https://send.vis.ee/"
 code = "https://github.com/timvisee/send"
 
 [integration]
-yunohost = ">= 11.1.19"
+yunohost = ">= 11.1.21"
 architectures = ["amd64", "arm64", "armhf"]
 multi_instance = true
 ldap = false
