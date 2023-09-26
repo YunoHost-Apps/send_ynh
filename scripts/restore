@@ -50,7 +50,7 @@ systemctl enable $app.service --quiet
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..."
 
-yunohost service add $app --description="Simple, private file sharing"
+yunohost service add $app --description="Simple, private file sharing" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
