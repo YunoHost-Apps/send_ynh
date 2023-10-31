@@ -32,7 +32,7 @@ Send is a file sharing experiment which allows you to send encrypted files to ot
 
 * Official app website: <https://send.vis.ee/>
 * Upstream app code repository: <https://github.com/timvisee/send>
-* YunoHost documentation for this app: <https://yunohost.org/app_send>
+* YunoHost Store: <https://apps.yunohost.org/app/send>
 * Report a bug: <https://github.com/YunoHost-Apps/send_ynh/issues>
 
 ## Developer info
