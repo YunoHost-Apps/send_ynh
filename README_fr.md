@@ -32,7 +32,7 @@ Send est une expérience de partage de fichiers qui permet d'envoyer des fichier
 
 * Site officiel de l’app : <https://send.vis.ee/>
 * Dépôt de code officiel de l’app : <https://github.com/timvisee/send>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_send>
+* YunoHost Store: <https://apps.yunohost.org/app/send>
 * Signaler un bug : <https://github.com/YunoHost-Apps/send_ynh/issues>
 
 ## Informations pour les développeurs
