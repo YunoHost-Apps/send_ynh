@@ -62,6 +62,22 @@ ynh_script_progression --message="Upgrading NGINX web server configuration..." -
 # Create a dedicated NGINX config
 ynh_add_nginx_config
 
+env_path="$PATH"
+# Create a dedicated systemd config
+ynh_add_systemd_config
+
+yunohost service add $app --description="Simple, private file sharing" --log="/var/log/$app/$app.log"
+
+#=================================================
+# UPDATE A CONFIG FILE
+#=================================================
+ynh_script_progression --message="Updating a configuration file..."
+
+ynh_add_config --template="config.js" --destination="$install_dir/server/config.js"
+
+chmod 400 "$install_dir/server/config.js"
+chown $app: "$install_dir/server/config.js"
+
 #=================================================
 # SPECIFIC UPGRADE
 #=================================================
@@ -78,34 +94,6 @@ then
 		ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm run build
 	popd
 fi
-
-#=================================================
-# UPDATE A CONFIG FILE
-#=================================================
-ynh_script_progression --message="Updating a configuration file..."
-
-ynh_add_config --template="../conf/config.js" --destination="$install_dir/server/config.js"
-
-chmod 400 "$install_dir/server/config.js"
-chown $app: "$install_dir/server/config.js"
-
-#=================================================
-# SETUP SYSTEMD
-#=================================================
-ynh_script_progression --message="Upgrading systemd configuration..." --weight=2
-
-env_path="$PATH"
-# Create a dedicated systemd config
-ynh_add_systemd_config
-
-#=================================================
-# GENERIC FINALIZATION
-#=================================================
-# INTEGRATE SERVICE IN YUNOHOST
-#=================================================
-ynh_script_progression --message="Integrating service in YunoHost..."
-
-yunohost service add $app --description="Simple, private file sharing"
 
 #=================================================
 # START SYSTEMD SERVICE
