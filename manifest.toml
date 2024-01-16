@@ -61,4 +61,4 @@ ram.runtime = "50M"
     download.allowed = "visitors"
     download.auth_header = false
     download.show_tile = false
-    download.additional_urls = [ "/inter.css", "re:/app.*\.css", "re:/app.*\.js", "re:/icon.*\.svg" ]
+    download.additional_urls = [ "/inter.css", "re:\/app.*\.css", "re:\/app.*\.js", "re:\/icon.*\.svg" ]
