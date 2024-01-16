@@ -61,4 +61,4 @@ ram.runtime = "50M"
     download.allowed = "visitors"
     download.auth_header = false
     download.show_tile = false
-    download.additional_urls = [ "^/.*.css$", "^/.*.js$", "^/.*.svg$", "^/.*.woff2$", "^/favicon.*.png$" ]
+    download.additional_urls = [ "re:^/.*.css$", "re:^/.*.js$", "re:^/.*.svg$", "re:^/.*.woff2$", "re:^/favicon.*.png$" ]
