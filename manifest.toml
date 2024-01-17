@@ -52,12 +52,14 @@ ram.runtime = "50M"
 
     [resources.permissions]
     main.url = "/"
-    main.additional_urls = "/api/upload"
+    main.additional_urls = ["/api/upload"]
+    
     api.url = "/api"
     api.allowed = "visitors"
     api.auth_header = false
     api.show_tile = false
     api.protected = true
+    
     download.url = "/download"
     download.allowed = "visitors"
     download.auth_header = false
