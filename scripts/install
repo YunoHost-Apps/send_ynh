@@ -14,7 +14,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression --message="Installing dependencies..." --weight=20
 
-ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
+ynh_exec_warn_less ynh_install_nodejs --nodejs_version="$nodejs_version"
 
 #=================================================
 # CREATE A REDIS DATABASE
@@ -34,7 +34,7 @@ ynh_script_progression --message="Setting up source files..." --weight=2
 ynh_setup_source --dest_dir="$install_dir"
 
 chmod -R o-rwx "$install_dir"
-chown -R $app:www-data "$install_dir"
+chown -R "$app:www-data" "$install_dir"
 chmod +x "$install_dir/server/bin/prod.js"
 
 #=================================================
@@ -49,7 +49,7 @@ env_path="$PATH"
 # Create a dedicated systemd config
 ynh_add_systemd_config
 
-yunohost service add $app --description="Simple, private file sharing" --log="/var/log/$app/$app.log"
+yunohost service add "$app" --description="Simple, private file sharing" --log="/var/log/$app/$app.log"
 
 #=================================================
 # ADD A CONFIGURATION
@@ -59,7 +59,7 @@ ynh_script_progression --message="Adding a configuration file..." --weight=2
 ynh_add_config --template="config.js" --destination="$install_dir/server/config.js"
 
 chmod 400 "$install_dir/server/config.js"
-chown $app: "$install_dir/server/config.js"
+chown "$app:" "$install_dir/server/config.js"
 
 #=================================================
 # SPECIFIC SETUP
@@ -70,8 +70,8 @@ ynh_script_progression --message="Building app... (this will take some time and 
 
 pushd "$install_dir"
 	ynh_use_nodejs
-	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm install
-	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm run build
+	ynh_exec_warn_less ynh_exec_as "$app" env "$ynh_node_load_PATH" "$ynh_npm" install
+	ynh_exec_warn_less ynh_exec_as "$app" env "$ynh_node_load_PATH" "$ynh_npm" run build
 popd
 
 #=================================================
@@ -80,7 +80,7 @@ popd
 ynh_script_progression --message="Starting a systemd service..." --weight=2
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="systemd"
+ynh_systemd_action --service_name="$app" --action="start" --log_path="systemd"
 
 #=================================================
 # END OF SCRIPT
