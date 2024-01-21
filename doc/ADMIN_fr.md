@@ -1,1 +1,1 @@
-Vous pouvez configurer des paramètres tels que les taille de fichier, nombre de téléchargements, ou temps d'expiration des fichiers maximums dans le panneau de configuration de l'app dans votre interface d'administration YunoHost.
+Vous pouvez configurer des paramètres tels que les taille de fichier, nombre de téléchargements ou temps d'expiration des fichiers maximums dans le panneau de configuration de l'app dans votre interface d'administration YunoHost.
