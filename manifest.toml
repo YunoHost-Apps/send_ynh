@@ -9,7 +9,7 @@ description.fr = "Partage de fichiers qui permet d'envoyer des fichiers chiffré
 
 version = "3.4.23~ynh3"
 
-maintainers = ["eric_G"]
+maintainers = []
 
 [upstream]
 license = "MPL-2.0"
