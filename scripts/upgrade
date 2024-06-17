@@ -72,17 +72,13 @@ chown "$app:" "$install_dir/server/config.js"
 #=================================================
 # BUILD APP
 #=================================================
+ynh_script_progression --message="Building app... (this will take some time and resources!)" --weight=16
 
-if [ "$upgrade_type" == "UPGRADE_APP" ]
-then
-	ynh_script_progression --message="Building app... (this will take some time and resources!)" --weight=16
-
-	pushd "$install_dir"
-		ynh_use_nodejs
-		ynh_exec_warn_less ynh_exec_as "$app" env "$ynh_node_load_PATH" "$ynh_npm" install
-		ynh_exec_warn_less ynh_exec_as "$app" env "$ynh_node_load_PATH" "$ynh_npm" run build
-	popd
-fi
+pushd "$install_dir"
+	ynh_use_nodejs
+	ynh_exec_warn_less ynh_exec_as "$app" env "$ynh_node_load_PATH" "$ynh_npm" install
+	ynh_exec_warn_less ynh_exec_as "$app" env "$ynh_node_load_PATH" "$ynh_npm" run build
+popd
 
 #=================================================
 # START SYSTEMD SERVICE
