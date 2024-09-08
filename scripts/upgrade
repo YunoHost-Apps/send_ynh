@@ -22,11 +22,10 @@ ynh_config_remove_logrotate
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-# Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$install_dir" --keep="server/config.js"
+ynh_setup_source --dest_dir="$install_dir" --keep="server/config.js" --full_replace
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R o-rwx "$install_dir"
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R "$app:www-data" "$install_dir"
+#chmod -R o-rwx "$install_dir"
+#chown -R "$app:www-data" "$install_dir"
 chmod +x "$install_dir/server/bin/prod.js"
 
 #=================================================
@@ -41,10 +40,8 @@ ynh_nodejs_install
 #=================================================
 ynh_script_progression "Upgrading NGINX web server configuration..."
 
-# Create a dedicated NGINX config
 ynh_config_add_nginx
 
-# Create a dedicated systemd config
 ynh_config_add_systemd
 
 yunohost service add "$app" --description="Simple, private file sharing" --log="/var/log/$app/$app.log"
@@ -56,8 +53,8 @@ ynh_script_progression "Updating configuration..."
 
 ynh_config_add --template="config.js" --destination="$install_dir/server/config.js"
 
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod 400 "$install_dir/server/config.js"
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown "$app:" "$install_dir/server/config.js"
+#chmod 400 "$install_dir/server/config.js"
+#chown "$app:" "$install_dir/server/config.js"
 
 #=================================================
 # BUILD APP
@@ -65,9 +62,8 @@ ynh_config_add --template="config.js" --destination="$install_dir/server/config.
 ynh_script_progression "Building app... (this will take some time and resources!)"
 
 pushd "$install_dir"
-
-	ynh_hide_warnings ynh_exec_as_app node_load_PATH" npm install
-	ynh_hide_warnings ynh_exec_as_app node_load_PATH" npm run build
+	ynh_hide_warnings ynh_exec_as_app npm install
+	ynh_hide_warnings ynh_exec_as_app npm run build
 popd
 
 #=================================================
