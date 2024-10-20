@@ -37,7 +37,7 @@ Send is a file sharing experiment which allows you to send encrypted files to ot
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/send_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/send_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
