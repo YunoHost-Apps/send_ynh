@@ -24,8 +24,6 @@ ynh_script_progression "Upgrading source files..."
 
 ynh_setup_source --dest_dir="$install_dir" --keep="server/config.js" --full_replace
 
-#chmod -R o-rwx "$install_dir"
-#chown -R "$app:www-data" "$install_dir"
 chmod +x "$install_dir/server/bin/prod.js"
 
 #=================================================
@@ -52,9 +50,6 @@ yunohost service add "$app" --description="Simple, private file sharing" --log="
 ynh_script_progression "Updating configuration..."
 
 ynh_config_add --template="config.js" --destination="$install_dir/server/config.js"
-
-#chmod 400 "$install_dir/server/config.js"
-#chown "$app:" "$install_dir/server/config.js"
 
 #=================================================
 # BUILD APP
