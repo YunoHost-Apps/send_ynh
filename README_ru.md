@@ -20,7 +20,7 @@ A fork of Mozilla's Firefox Send. Mozilla discontinued Send, this fork is a comm
 Send is a file sharing experiment which allows you to send encrypted files to other users.
 
 
-**Поставляемая версия:** 3.4.23~ynh4
+**Поставляемая версия:** 3.4.23~ynh5
 
 **Демо-версия:** <https://send.vis.ee/>
 
