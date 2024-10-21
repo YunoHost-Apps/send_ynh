@@ -20,7 +20,7 @@ A fork of Mozilla's Firefox Send. Mozilla discontinued Send, this fork is a comm
 Send is a file sharing experiment which allows you to send encrypted files to other users.
 
 
-**Versión actual:** 3.4.23~ynh4
+**Versión actual:** 3.4.23~ynh5
 
 **Demo:** <https://send.vis.ee/>
 
@@ -37,7 +37,7 @@ Send is a file sharing experiment which allows you to send encrypted files to ot
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/send_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/send_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 

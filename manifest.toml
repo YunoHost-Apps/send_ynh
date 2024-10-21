@@ -7,7 +7,7 @@ name = "Send"
 description.en = "File sharing which allows to send encrypted files"
 description.fr = "Partage de fichiers qui permet d'envoyer des fichiers chiffrés"
 
-version = "3.4.23~ynh4"
+version = "3.4.23~ynh5"
 
 maintainers = []
 
@@ -18,7 +18,8 @@ demo = "https://send.vis.ee/"
 code = "https://github.com/timvisee/send"
 
 [integration]
-yunohost = ">= 11.2.12"
+yunohost = ">= 11.2.30"
+helpers_version = "2.1"
 architectures = ["amd64", "arm64", "armhf"]
 multi_instance = true
 
