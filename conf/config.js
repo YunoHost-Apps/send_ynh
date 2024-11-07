@@ -156,7 +156,7 @@ const conf = convict({
   max_file_size: {
     format: Number,
     default: 1024 * 1024 * 1024 * 2.5,
-    env: '__MAX_FILE_SIZE__'
+    env: __MAX_FILE_SIZE__ * 1024 * 1024,
   },
   l10n_dev: {
     format: Boolean,

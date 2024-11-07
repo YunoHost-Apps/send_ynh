@@ -13,7 +13,7 @@ ynh_app_setting_set --key=custom_title --value="$custom_title"
 custom_description="Encrypt and send files with a link that automatically expires to ensure your important documents don’t stay online forever."
 ynh_app_setting_set --key=custom_description --value="$custom_description"
 
-max_file_size=2684354560
+max_file_size=100
 ynh_app_setting_set --key=max_file_size --value="$max_file_size"
 
 max_download=100
