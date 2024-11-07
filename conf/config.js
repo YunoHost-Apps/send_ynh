@@ -156,7 +156,7 @@ const conf = convict({
   max_file_size: {
     format: Number,
     default: 1024 * 1024 * 1024 * 2.5,
-    env: 'MAX_FILE_SIZE'
+    env: '__MAX_FILE_SIZE__'
   },
   l10n_dev: {
     format: Boolean,
@@ -171,12 +171,12 @@ const conf = convict({
   custom_title: {
     format: String,
     default: 'Send',
-    env: 'CUSTOM_TITLE'
+    env: '__CUSTOM_TITLE__'
   },
   custom_description: {
     format: String,
     default: 'Encrypt and send files with a link that automatically expires to ensure your important documents don’t stay online forever.',
-    env: 'CUSTOM_DESCRIPTION'
+    env: '__CUSTOM_DESCRIPTION__'
   },
   detect_base_url: {
     format: Boolean,
