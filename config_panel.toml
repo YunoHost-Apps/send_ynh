@@ -31,12 +31,14 @@ services = ["__APP__"]
         ask.en = "Custom Title"
         ask.fr = "Titre personnalisé"
         type = "string"
-        help = "Add a custom title for Send"
+        help.en = "Add a custom title for Send"
+        help.fr = "Ajouter un titre personnalisé pour Send"
         bind = "custom_title:/var/www/__APP__/server/config.js"
 
         [main.config.custom_description]
         ask.en = "Custom Description"
         ask.fr = "Description personnalisée"
         type = "string"
-        help = "Add a custom description for Send"
+        help.en = "Add a custom description for Send"
+        help.fr = "Ajouter une description personnalisée pour Send"
         bind = "custom_description:/var/www/__APP__/server/config.js"
