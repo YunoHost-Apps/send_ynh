@@ -75,7 +75,7 @@ const conf = convict({
   max_downloads: {
     format: Number,
     default: 100,
-    env: 'MAX_DOWNLOADS'
+    env: '__MAX_DOWNLOADS__'
   },
   max_files_per_archive: {
     format: Number,

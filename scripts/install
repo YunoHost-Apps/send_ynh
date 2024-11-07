@@ -16,8 +16,8 @@ ynh_app_setting_set --key=custom_description --value="$custom_description"
 max_file_size=100
 ynh_app_setting_set --key=max_file_size --value="$max_file_size"
 
-max_download=100
-ynh_app_setting_set --key=max_download --value="$max_download"
+max_downloads=100
+ynh_app_setting_set --key=max_downloads --value="$max_downloads"
 
 #=================================================
 # INSTALL DEPENDENCIES

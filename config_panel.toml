@@ -16,27 +16,27 @@ services = ["__APP__"]
         default = 100
         help.en = "Choose the maximum file size allowed to send (in Mo)"
         help.fr = "Choisissez la taille maximale du fichier autorisé à envoyer (en Mo)"
-        bind = "max_file_size:__INSTALL_DIR__/server/config.js"
+        bind = "max_file_size:/var/www/__APP__/server/config.js"
 
-        [main.config.max_download]
-        ask.en = "Max download"
-        ask.fr = "Téléchargement maximal"
+        [main.config.max_downloads]
+        ask.en = "Max downloads"
+        ask.fr = "Téléchargements maximal"
         type = "number"
         default = 100
         help.en = "Define the maximum download limit"
         help.fr = "Définir la limite maximale du nombre de téléchargement"
-        bind = "max_download:__INSTALL_DIR__/server/config.js"
+        bind = "max_downloads:/var/www/__APP__/server/config.js"
 
         [main.config.custom_title]
         ask.en = "Custom Title"
         ask.fr = "Titre personnalisé"
         type = "string"
         help = "Add a custom title for Send"
-        bind = "custom_title:__INSTALL_DIR__/server/config.js"
+        bind = "custom_title:/var/www/__APP__/server/config.js"
 
         [main.config.custom_description]
         ask.en = "Custom Description"
         ask.fr = "Description personnalisée"
         type = "string"
         help = "Add a custom description for Send"
-        bind = "custom_description:__INSTALL_DIR__/server/config.js"
+        bind = "custom_description:/var/www/__APP__/server/config.js"

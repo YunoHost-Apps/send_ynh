@@ -23,9 +23,9 @@ if [ -z ${max_file_size:-} ]; then
 	ynh_app_setting_set --key=max_file_size --value="$max_file_size"
 fi
 
-if [ -z ${max_download:-} ]; then
-	max_download=100
-	ynh_app_setting_set --key=max_download --value="$max_download"
+if [ -z ${max_downloads:-} ]; then
+	max_downloads=100
+	ynh_app_setting_set --key=max_downloads --value="$max_downloads"
 fi
 
 #=================================================
