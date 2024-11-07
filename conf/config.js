@@ -74,8 +74,8 @@ const conf = convict({
   },
   max_downloads: {
     format: Number,
-    default: 100,
-    env: '__MAX_DOWNLOADS__'
+    default: __MAX_DOWNLOADS__,
+    env: 'MAX_DOWNLOADS'
   },
   max_files_per_archive: {
     format: Number,
@@ -155,8 +155,8 @@ const conf = convict({
   },
   max_file_size: {
     format: Number,
-    default: 1024 * 1024 * 1024 * 2.5,
-    env: __MAX_FILE_SIZE__ * 1024 * 1024,
+    default: __MAX_FILE_SIZE__ * 1024 * 1024,
+    env: 'MAX_FILE_SIZE'
   },
   l10n_dev: {
     format: Boolean,
@@ -170,13 +170,13 @@ const conf = convict({
   },
   custom_title: {
     format: String,
-    default: 'Send',
-    env: '__CUSTOM_TITLE__'
+    default: '__CUSTOM_TITLE__',
+    env: 'CUSTOM_TITLE'
   },
   custom_description: {
     format: String,
-    default: 'Encrypt and send files with a link that automatically expires to ensure your important documents don’t stay online forever.',
-    env: '__CUSTOM_DESCRIPTION__'
+    default: '__CUSTOM_DESCRIPTION__',
+    env: 'CUSTOM_DESCRIPTION'
   },
   detect_base_url: {
     format: Boolean,
