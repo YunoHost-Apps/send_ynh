@@ -64,7 +64,7 @@ ynh_config_add --template="config.js" --destination="$install_dir/server/config.
 #=================================================
 # BUILD APP
 #=================================================
-ynh_script_progression "Building app... (this will take some time and resources!)"
+ynh_script_progression "Building $app... (this will take some time and resources!)"
 
 pushd "$install_dir"
 	ynh_hide_warnings ynh_exec_as_app npm install
