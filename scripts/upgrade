@@ -9,12 +9,12 @@ source /usr/share/yunohost/helpers
 ynh_script_progression "Ensuring downward compatibility..."
 
 if [ -z ${custom_title:-} ]; then
-	custom_title=Send
+	custom_title="Send"
     ynh_app_setting_set --key=custom_title --value="$custom_title"
 fi
 
 if [ -z ${custom_description:-} ]; then
-	custom_description="Encrypt and send files with a link that automatically expires to ensure your important documents don’t stay online forever."
+	custom_description="Encrypt and send files with a link that automatically expires."
     ynh_app_setting_set --key=custom_description --value="$custom_description"
 fi
 

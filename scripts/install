@@ -10,7 +10,7 @@ source /usr/share/yunohost/helpers
 custom_title="Send"
 ynh_app_setting_set --key=custom_title --value="$custom_title"
 
-custom_description="Encrypt and send files with a link that automatically expires to ensure your important documents don’t stay online forever."
+custom_description="Encrypt and send files with a link that automatically expires."
 ynh_app_setting_set --key=custom_description --value="$custom_description"
 
 max_file_size=100
