@@ -20,7 +20,7 @@ fi
 
 if [ -z ${max_file_size:-} ]; then
 	max_file_size="2684354560"
-	ynh_app_setting_set --key=cmax_file_size --value="$max_file_size"
+	ynh_app_setting_set --key=max_file_size --value="$max_file_size"
 fi
 
 if [ -z ${max_download:-} ]; then
