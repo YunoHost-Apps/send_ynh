@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # Send para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/send.svg)](https://ci-apps.yunohost.org/ci/apps/send/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/send.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/send.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/send)](https://ci-apps.yunohost.org/ci/apps/send/)
+![Estado funcional](https://apps.yunohost.org/badge/state/send)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/send)
 
 [![Instalar Send con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=send)
 

@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Send untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/send.svg)](https://ci-apps.yunohost.org/ci/apps/send/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/send.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/send.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/send)](https://ci-apps.yunohost.org/ci/apps/send/)
+![Status kerja](https://apps.yunohost.org/badge/state/send)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/send)
 
 [![Pasang Send dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=send)
 

@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # Send YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/send.svg)](https://ci-apps.yunohost.org/ci/apps/send/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/send.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/send.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/send)](https://ci-apps.yunohost.org/ci/apps/send/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/send)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/send)
 
 [![Instalatu Send YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=send)
 
