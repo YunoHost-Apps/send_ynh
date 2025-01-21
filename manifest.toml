@@ -7,7 +7,7 @@ name = "Send"
 description.en = "File sharing which allows to send encrypted files"
 description.fr = "Partage de fichiers qui permet d'envoyer des fichiers chiffrés"
 
-version = "3.4.23~ynh5"
+version = "3.4.23~ynh6"
 
 maintainers = []
 
