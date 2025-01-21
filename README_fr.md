@@ -22,7 +22,7 @@ Un fork du Firefox Send de Mozilla. Mozilla a arrêté Send, et ce fork est un e
 Send est une expérience de partage de fichiers qui permet d'envoyer des fichiers chiffrés à d'autres utilisateurs.
 
 
-**Version incluse :** 3.4.23~ynh5
+**Version incluse :** 3.4.23~ynh6
 
 **Démo :** <https://send.vis.ee/>
 
