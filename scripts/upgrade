@@ -8,25 +8,10 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Ensuring downward compatibility..."
 
-if [ -z ${custom_title:-} ]; then
-	custom_title="Send"
-    ynh_app_setting_set --key=custom_title --value="$custom_title"
-fi
-
-if [ -z ${custom_description:-} ]; then
-	custom_description="Encrypt and send files with a link that automatically expires."
-    ynh_app_setting_set --key=custom_description --value="$custom_description"
-fi
-
-if [ -z ${max_file_size:-} ]; then
-	max_file_size=100
-	ynh_app_setting_set --key=max_file_size --value="$max_file_size"
-fi
-
-if [ -z ${max_downloads:-} ]; then
-	max_downloads=100
-	ynh_app_setting_set --key=max_downloads --value="$max_downloads"
-fi
+ynh_app_setting_set_default --key=custom_title --value="send"
+ynh_app_setting_set_default --key=custom_description --value="Encrypt and send files with a link that automatically expires."
+ynh_app_setting_set_default --key=max_file_size --value=100
+ynh_app_setting_set_default --key=max_downloads --value=100
 
 #=================================================
 # STOP SYSTEMD SERVICE
