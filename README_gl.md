@@ -5,7 +5,9 @@ NON debe editarse manualmente.
 
 # Send para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/send.svg)](https://ci-apps.yunohost.org/ci/apps/send/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/send.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/send.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/send)](https://ci-apps.yunohost.org/ci/apps/send/)
+![Estado de funcionamento](https://apps.yunohost.org/badge/state/send)
+![Estado de mantemento](https://apps.yunohost.org/badge/maintained/send)
 
 [![Instalar Send con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=send)
 
@@ -20,7 +22,7 @@ A fork of Mozilla's Firefox Send. Mozilla discontinued Send, this fork is a comm
 Send is a file sharing experiment which allows you to send encrypted files to other users.
 
 
-**Versión proporcionada:** 3.4.23~ynh5
+**Versión proporcionada:** 3.4.23~ynh6
 
 **Demo:** <https://send.vis.ee/>
 
