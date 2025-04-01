@@ -43,7 +43,7 @@ yunohost service add "$app" --description="Simple, private file sharing" --log="
 #=================================================
 ynh_script_progression "Adding $app's configuration..."
 
-ynh_config_add --template="config.js" --destination="$install_dir/server/config.js"
+ynh_config_add --template=".env" --destination="$install_dir/.env"
 
 #=================================================
 # BUILD APP
