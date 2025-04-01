@@ -41,7 +41,7 @@ Send is a file sharing experiment which allows you to send encrypted files to ot
 
 Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/send_ynh/tree/testing).
 
-`testing` abarra probatzeko, ondorengoa egin:
+`testing` abarra probatzeko, honakoa egin:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/send_ynh/tree/testing --debug
