@@ -4,6 +4,16 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
+# ENSURE DOWNWARD COMPATIBILITY
+#=================================================
+ynh_script_progression "Ensuring downward compatibility..."
+
+ynh_app_setting_set_default --key=custom_title --value="send"
+ynh_app_setting_set_default --key=custom_description --value="Encrypt and send files with a link that automatically expires."
+ynh_app_setting_set_default --key=max_file_size --value=100
+ynh_app_setting_set_default --key=max_downloads --value=100
+
+#=================================================
 # STOP SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Stopping $app's systemd service..."
