@@ -7,7 +7,7 @@ name = "Send"
 description.en = "File sharing which allows to send encrypted files"
 description.fr = "Partage de fichiers qui permet d'envoyer des fichiers chiffrés"
 
-version = "3.4.25~ynh1"
+version = "3.4.27~ynh1"
 
 maintainers = []
 
@@ -42,8 +42,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/timvisee/send/archive/refs/tags/v3.4.25.tar.gz"
-        sha256 = "826224832ac8facdd368f9960d99afdef0a549d92b003af1d93bc271b6fa036a"
+        url = "https://github.com/timvisee/send/archive/refs/tags/v3.4.27.tar.gz"
+        sha256 = "fda2db869f3affbaf1fa025501c8b32b92cd85d350a1424b20db7f9164dce301"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.ports]
