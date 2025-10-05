@@ -18,7 +18,7 @@ demo = "https://send.vis.ee/"
 code = "https://github.com/timvisee/send"
 
 [integration]
-yunohost = ">= 12.0.9"
+yunohost = ">= 12.1.17"
 helpers_version = "2.1"
 architectures = ["amd64", "arm64", "armhf"]
 multi_instance = true
@@ -69,4 +69,7 @@ ram.runtime = "50M"
     download.additional_urls = [ "re:^__DOMAIN__/.*.css$", "re:^__DOMAIN__/.*.js$", "re:^__DOMAIN__/.*.svg$", "re:^__DOMAIN__/.*.woff2$", "re:^__DOMAIN__/favicon.*.png$" ]
 
     [resources.apt]
-    packages = ["redis-server"]
+    packages = "redis-server"
+
+    [resources.nodejs]
+    version = "16"
