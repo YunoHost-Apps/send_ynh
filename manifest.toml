@@ -7,7 +7,7 @@ name = "Send"
 description.en = "File sharing which allows to send encrypted files"
 description.fr = "Partage de fichiers qui permet d'envoyer des fichiers chiffrés"
 
-version = "3.4.23~ynh5"
+version = "3.5.0~ynh1"
 
 maintainers = []
 
@@ -18,13 +18,12 @@ demo = "https://send.vis.ee/"
 code = "https://github.com/timvisee/send"
 
 [integration]
-yunohost = ">= 11.2.30"
+yunohost = ">= 12.1.40"
 helpers_version = "2.1"
 architectures = ["amd64", "arm64", "armhf"]
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "50M"
@@ -43,8 +42,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/timvisee/send/archive/refs/tags/v3.4.23.tar.gz"
-        sha256 = "eed0e391050842413d300133a64cc76829e3ba1d69e113f6e5fdc3eda777fa2a"
+        url = "https://github.com/timvisee/send/archive/refs/tags/v3.5.0.tar.gz"
+        sha256 = "d8e483c0ff1377ed9773dfe888af8b45a68a08769afb1e31eddb32fff79c0190"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.ports]
@@ -71,3 +70,6 @@ ram.runtime = "50M"
 
     [resources.apt]
     packages = "redis-server"
+
+    [resources.nodejs]
+    version = "26"

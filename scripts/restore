@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source ../settings/scripts/_common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -17,8 +16,6 @@ chmod +x "$install_dir/server/bin/prod.js"
 #=================================================
 ynh_script_progression "Reinstalling dependencies..."
 
-ynh_nodejs_install
-
 ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
 ynh_restore "/etc/systemd/system/$app.service"
@@ -31,7 +28,7 @@ yunohost service add "$app" --description="Simple, private file sharing" --log="
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start" --log_path="systemd"
+ynh_systemctl --service="$app" --action="start"
 
 ynh_systemctl --service=nginx --action=reload
 
