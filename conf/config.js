@@ -1,3 +1,11 @@
+// ⚠️ IMPORTANT WARNING: do NOT edit this config file by hand,
+// else your modifications will be ERASED at each update of the Send package!
+// Instead, use the config panel in your web admin interface:
+// Applications ➡️ Send ➡️ Config panel ➡️ do your config edit ➡️ Save
+// Most of the relevant settings are available in the config panel, if you're
+// missing one, open an issue: https://github.com/YunoHost-Apps/send_ynh/issues
+
+
 const convict = require('convict');
 const convict_format_with_validator = require('convict-format-with-validator');
 const { tmpdir } = require('os');
